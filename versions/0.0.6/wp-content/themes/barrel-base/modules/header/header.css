@@ -1,0 +1,243 @@
+
+@keyframes preloader_animation {
+    from {left: 0;}
+    to {left: -100px;}
+}
+
+body{
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin: auto;
+    padding-top: 100px;
+    background-color: #222;
+}
+
+body.frozen{ overflow: hidden; }
+
+.header{ height: 100px; width:100%; position: fixed; top:0; background-color: #000; z-index: 9; }
+.header:before{ content: 'Sponsored By'; display:block; background-color: tan; height: 23px; width: 100%; text-align: center; font-size: 13px; line-height: 23px;  }
+.search-form{ display: none; }
+
+.header:before{ content: 'Sponsored By'; display:block; background-color: tan; height: 23px; width: 100%; text-align: center; font-size: 13px; line-height: 23px;  }
+
+/*.hero__text{ float: left; width:50%; padding: 30px; }*/
+
+.header{
+
+	h1{ color: white; }
+	h2{ color: white; }
+
+
+	.header__sponsor-logo{
+		color: tan;
+    	display: block;
+    	margin: 20px auto;
+    	text-align: center;
+    	border: 2px solid tan;
+    	width: 80px;
+    	height: 36px;
+    	line-height: 36px;
+    }
+
+    .header-logo-1{
+    	background-image: url(logo/www.knobcreek.com-1311011787501770.svg); background-repeat: no-repeat; width: 65px; height: 40px; margin:20px 20px; float: left; background-size: contain;
+    }
+	
+
+	.header-logo-2{
+		color: tan;
+    	display: block;
+    	margin: 20px auto;
+    	text-align: center;
+    	border: 2px solid tan;
+    	width: 80px;
+    	height: 36px;
+    	line-height: 36px;
+    }
+
+} 
+
+
+
+
+
+
+
+
+.modal{ width: 100%; height: 100%; position: fixed; top: 0; background-color: rgba(0,0,0,.2); z-index: 99; opacity: 0; visibility: hidden; transition: visibility 0s, opacity .7s; }
+
+.modal.loading{
+
+    article{ opacity: 0; }
+    .modal__box:before{ content: "loading..."; text-align: center; display: block; opacity: .5; font-size: 12px; }
+
+}
+
+.modal.on{ opacity: 1; visibility: visible; }
+
+.modal__box{ transition:transform .7s ease-in-out; }
+
+.modal__box h1{ margin: 0; font-size: 20px; line-height: 30px; margin-bottom: 20px; text-align: center; }
+.modal__box img{ width: 100%; height: auto; }
+.modal__box p{ margin-bottom: 80px; }
+
+.modal__box form input[type=text],
+.modal__box form textarea{ width: 100%; padding:5px 10px; margin:10px 0; outline: 0; resize: none; margin-top: 0; }
+
+.modal__box form input[name=title]{ font-size: 20px; }
+.modal__box form input[type=submit]{ color:white; margin:40px auto; display: block; width:100%; max-width: 200px; height: 50px; background: #BD3131; text-align: center; }
+
+.modal__box .modal__box__field{ border-left: 1px solid #999; padding-left: 10px; font-size: 12px; position: relative; }
+.modal__box .modal__box__field span{ position: absolute; left: -70px; font-size: 10px; text-transform: uppercase; width: 60px; text-align: right; color: #666; top: -5px; }
+.modal__box .modal__box__field input[type=radio]{ margin-left: 10px; margin-right: 5px; }
+.modal__box .modal__box__field input[type=checkbox]{ margin-left: 10px; }
+
+
+
+.modal__box__close{ 
+
+    
+    display: block;
+    padding: 5px;
+    
+
+    cursor: pointer; position: absolute; right: 10px; top:10px; -webkit-transition: -webkit-transform .4s ease-in-out; transition: transform .4s ease-in-out;
+
+
+    
+
+ }
+
+.modal__box__icon{display: block;
+    background-size: cover;
+    margin: auto;
+    background-color: #000; width:10px; height:10px; -webkit-mask-image: url(iconography/cancel.svg); -mask-image: url(iconography/cancel.svg);  }
+
+
+.modal__box__close:hover { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+
+
+.modal__box__type label{ font-size: 12px; margin-right: 5px; }
+.modal__box__type label input{ margin-right: 5px; }
+
+
+/*.modal .modal__box{ transform: scale(.7); }*/
+/*.modal.on .modal__box{ transform: scale(1); }*/
+
+.modal__box{
+
+    article{
+        transition: opacity .7s; 
+        display: block;
+        overflow-y: auto;
+        max-height: 500px;
+    }
+
+}
+
+.modal.loading{
+    
+    .modal__box{ }
+
+}
+
+
+
+
+
+.social_media_links{ float: right; margin-right: 20px; }
+
+.social_media_links{
+
+    li{ float: right; }
+    a{ background-size: cover; margin: 10px; background-color:tan; text-indent: -3000px; }
+
+    .Twitter a{ display: block; -webkit-mask-image: url(iconography/twitter.svg); -mask-image: url(iconography/twitter.svg); width:22px; height:22px; background-size: cover; }
+    .Facebook a{ display: block; -webkit-mask-image: url(iconography/facebook-f.svg); -mask-image: url(iconography/facebook-f.svg); width:11px; height:21px; background-size: cover; }
+
+}
+
+
+body.loading .preloader{
+    visibility: visible;
+    bottom: 0px;
+
+    animation-name: preloader_animation;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.preloader{
+    transition: bottom .7s;
+    bottom: -10px;
+    background-color: tan;
+    background-image: linear-gradient(90deg, transparent 50%, rgba(255,255,255,.5) 50%);
+    background-size: 100px;
+    position: fixed;
+    width: 200%;
+    height: 10px;
+    left: -160px;
+
+    z-index: 99;
+
+    
+
+}
+
+/* INTERMEDIATE - 1000 px */
+
+@media only screen and (min-width: 1000px){
+
+	.header{
+		width: 100%;
+	}
+
+
+    .modal__box{
+        width: calc(50% - 80px);
+        background-color: white;
+        min-height: 500px;
+        position: absolute;
+        left: 25%;
+        top:25%;
+        padding: 40px;
+    }
+
+}
+
+
+
+
+/* MOBILE */
+
+@media only screen and (min-width: 600px) and (max-width: 999px){
+
+    .modal__box{
+        width: calc(80% - 80px);
+        background-color: #fff;
+        min-height: 500px;
+        position: absolute;
+        left: 10%;
+        top: 10%;
+        padding: 40px;
+    }
+
+}
+
+
+@media only screen and (max-width: 599px) {
+
+    .modal__box{
+        width: calc(80% - 80px);
+        background-color: #fff;
+        min-height: 500px;
+        position: absolute;
+        left: 10%;
+        top: 10%;
+        padding: 40px;
+    }
+
+}

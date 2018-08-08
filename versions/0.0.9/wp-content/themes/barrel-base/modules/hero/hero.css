@@ -1,0 +1,230 @@
+.hero{
+
+	background-color: #B5A484;
+	background-image: url('photography/www.knobcreek.com-1293609732325191.jpg'); 
+	background-repeat: no-repeat; 
+	float: left;
+	margin: auto;
+
+}	
+
+
+
+.hero{
+
+	figure{
+		background: red;
+	}
+
+	
+	.hero__text{
+		color: white;
+	}
+
+  .hero__text{
+
+    h1{
+      margin: 0;
+    }
+
+  }
+
+	.hero__image{
+		margin: 0;
+		background-image: url('photography/www.knobcreek.com-1310894113736742.png');
+		background-repeat: no-repeat;
+		background-position-x:center;
+	}
+
+
+  article.post{
+
+    .__icon-wrapper{ background-color: transparent; }
+
+  }
+
+
+	article.post{ width:100%; display: block; margin: auto; background-color: white; clear: both; }
+
+	article.post .__text{ text-align: center; padding: 20px; }
+	article.post .__date{ text-align: center; padding: 20px; text-transform: uppercase; text-transform: uppercase; display: block; letter-spacing: 1.1px; font-weight: bold; font-size: 12px; }
+
+	article.post:after { content: "."; visibility: hidden; display: block; height: 0; clear: both; }
+
+	article.post .date{ text-transform: uppercase; }
+
+	article.post .__edit,
+	article.post .__read-more{ color:#BD3131; text-decoration: none; font-weight: bold; transition: all .7s; display: block; }
+	article.post:hover .__read-more{ color:#000; }
+
+	article.post .__icon-wrapper{ width: 50px; height: 30px; display: block; fill:red; margin:auto; padding: 10px 0; border-radius: 50%; transition: background-color .7s }
+	article.post .__icon{ display: block; background-size: cover; margin: auto; background-color:#BD3131; }
+
+  .post{
+
+    main{
+      display: block;
+    }
+  }
+
+}
+
+
+
+/* DESKTOP - 1440 px */
+
+@media only screen and (min-width: 1440px) {
+
+
+  .hero{ padding: 100px; width:calc(100% - 100px);  }
+
+  .hero{
+
+  	.hero__text{ width: calc(50% - 100px); float: left; padding: 50px 0px 50px 100px; float: left; color: white; padding-left: 0px; }
+
+  	.hero__text{
+  		
+  		h1{
+  			font-size: 70px;
+    		line-height: 105px;
+  		}
+
+  		p{
+  			font-size: 16px;
+    		line-height: 24px;
+  		}
+  	}
+
+  	.hero__image{ height: 425px; }
+  	article.post figure{ width: 50%; float: left; }
+
+  }
+
+  
+
+}
+
+
+
+
+/* INTERMEDIATE - 1000 px */
+
+@media only screen and (min-width: 1000px){
+
+
+	.hero{ background-size: contain; padding: 60px 75px; width: calc(100% - 150px); }
+
+  	.hero{
+
+  		.hero__text{ width: calc(50% - 0px); float: left; padding: 0px; float: left; }
+
+      .hero__text{
+      
+        h1{
+          font-size: 60px;
+          line-height: 70px;
+        }
+
+        p{
+          font-size: 15px;
+          line-height: 22px;
+        }
+      }
+
+
+  		.hero__image{ height: 425px; float: left; width: 50%; }
+
+  		article.post{
+
+  			padding-bottom: 0;
+
+  		}
+
+  		article.post{
+
+        .post__text{
+
+          float: right;
+          margin: 100px 100px 0px 100px;
+          width: calc(50% - 200px);
+
+        }
+
+  			figure{ width: 50%; float: left; }
+  			.__text{ width: calc(50% - 100px); float: left; text-align: center; padding:100px 50px; padding-bottom: 0; }
+
+  		}
+
+  	}
+
+  
+
+
+}
+
+
+
+
+
+/* MOBILE */
+
+@media only screen and (min-width: 600px) and (max-width: 999px){
+
+  .hero{ padding: 0 40px 60px 40px; width:calc(100% - 80px); }
+
+  .hero{
+
+  	.hero__text{ text-align: center; float: none; padding: 60px 85px; }
+  	.hero__text p{ font-size: 13px; }
+  	.hero__image{ height: 230px; float: none; display: block; width: 100%; background-size: 180px; }
+
+
+    article{
+
+      .post__text{
+
+          float: right;
+          margin: 50px;
+          width: auto;
+
+      }
+
+    }
+
+ }
+
+
+
+}
+
+
+
+
+
+
+@media only screen and (max-width: 599px) {
+
+
+
+  .hero{ background-position-x: center; padding: 0 30px 30px 30px; }
+  
+  .hero{
+
+  	.hero__text{ width:auto; text-align: center; float: none; margin-bottom: 20px; padding: 60px 0px;  }
+  	.hero__image{ height: 300px; float: none; display: block; width: 100%; background-size: 180px; }
+
+    .post__text{
+        float: right;
+        margin: 50px 50px 0px 50px;
+        width: calc(100% - 100px);
+      }
+
+  }
+
+  
+}
+
+
+@media only screen and (max-width: 320px) {
+
+}

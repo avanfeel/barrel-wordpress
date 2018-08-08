@@ -1,0 +1,189 @@
+.articles{ float: left; background-color: white; }
+
+.articles.fetching:after{     content: "loading more...";
+    clear: both;
+    display: block;
+    text-align: center;
+    opacity: .5;
+    font-size: 12px; }
+
+.articles:before {
+    content: 'Recent articles';
+    text-align: center;
+    display: block;
+    font-size: 35px;
+    font-weight: normal;
+    margin: 50px 0;
+}
+
+.articles{
+
+	article.post:hover img{ transform: scale(1.1) rotate(1deg); opacity: .7; }
+	article.post:hover{ background-color: #111; color: white; }
+	article.post:hover .__icon-wrapper{ background-color:#111; }
+	article.post:hover h1{ color:#fff; }
+}
+
+.post{
+	text-align: center;
+	background-color: #F3F1Ed; padding-bottom: 30px; transition: opacity .7s, background-color .7s;
+	margin-bottom: 30px; width: calc(33.33% - 20px); float: left; list-style-type: none;
+
+}
+
+
+.post.hidden{ display: none; }
+
+.post.type-article .__icon{ width:25px; height:30px; -webkit-mask-image: url(iconography/Article.svg); -mask-image: url(iconography/Article.svg); }
+.post.type-video .__icon{ width:34px; height:28px; -webkit-mask-image: url(iconography/Video.svg); -mask-image: url(iconography/Video.svg); }
+.post.type-gallery .__icon{ width:22px; height:20px; -webkit-mask-image: url(iconography/Gallery.svg); -mask-image: url(iconography/Gallery.svg); }
+.post.type-recipe .__icon{ width:36px; height:44px; -webkit-mask-image: url(iconography/Glass.svg); -mask-image: url(iconography/Glass.svg); }
+
+
+.post.type-article .post__readmore:after{ content: 'Read More'; }
+.post.type-video .post__readmore:after{ content: 'Watch Video'; }
+.post.type-gallery .post__readmore:after{ content: 'View Gallery'; }
+.post.type-recipe .post__readmore:after{ content: 'View Recipe'; }
+
+.post{
+
+	header{ float: left; width:100%; }
+	main{ display: none; }
+
+	.post__text{ position: relative; padding-top: 20px; }
+	
+	h1{ font-weight: bold; color: #333; text-decoration: none; margin-top: 0; }
+
+	
+	.post__date{ text-transform: uppercase; letter-spacing: 1.5px; font-size: 12px; font-weight: bold; }
+
+	figure{ position: relative; transition: opacity .7s; overflow: hidden; background-color: black; }
+	.__text{ position: relative; padding-top: 30px; }
+
+	.__icon-wrapper{ width: 50px; height: 30px; display: block; fill:red; background-color: #F3F1Ed; position: absolute; top: -25px; left:calc(50% - 25px); padding: 10px 0; border-radius: 50%; transition: background-color .7s }
+	.__icon{ display: block; background-size: cover; margin: auto; background-color:#BD3131; }
+
+	
+
+	.__date{  text-transform: uppercase; text-align: center; display: block; text-transform: uppercase; display: block; letter-spacing: 1.1px; font-weight: bold; font-size: 12px; }
+
+	.post__readmore{ color:#BD3131; text-decoration: none; font-weight: bold; display: block; margin:auto; text-align: center; }
+
+
+	figure{  margin: 0; width: 100%; display: block; max-width: 100%; }
+	
+	figure{
+		img{
+			width: 100%; display: block; max-width: 100%; transition: all .7s; position: relative; 
+		}
+
+		img.lazyload{ opacity: 0; }
+	}
+
+
+  .articles article.post{ margin-bottom: 30px; width: calc(50% - 10px); float: left; list-style-type: none; }
+  
+  
+
+  /* Icons size 20% smaller */
+  article.post .__icon{ width: 20px; height: 25px; } 
+
+}
+
+
+/* INTERMEDIATE - 1000 px */
+
+@media only screen and (min-width: 1000px){
+
+
+	.articles{
+		padding: 0 75px;
+		width: calc(100% - 150px);
+	}
+
+	.post:nth-child(3n+1){
+			clear:left;
+	    	margin-right: 20px;
+		}
+
+	.post:nth-child(3n+2){
+	    	margin: 0 10px;
+		}
+
+	.post:nth-child(3n+3){
+    		margin-left: 20px;
+    }
+
+
+    .post{
+
+    	h1{ font-size: 21px; line-height: 31px; }
+    	p{ font-size: 15px; }
+
+    }
+
+
+
+
+}
+
+
+
+
+
+/* MOBILE */
+
+@media only screen and (min-width: 600px) and (max-width: 999px){
+
+	.articles{
+		padding: 0 40px;
+	}
+
+
+	.post{
+		margin-bottom: 30px; width: calc(50% - 10px); float: left; list-style-type: none;
+	}
+
+	.post:nth-child(2n+1){ margin-right: 10px; }
+  	.post:nth-child(2n+2){ margin-left: 10px; }
+	.post:nth-child(2n+1){ clear:left; }
+
+	.post{
+
+		h1{
+
+			 font-size: 18px; line-height: 27px;
+		}
+
+		p{ font-size: 14px; }
+
+
+  		/* Icons size 20% smaller */
+  		.__icon{ width: 20px; height: 25px; } 
+
+	}
+
+
+}
+
+
+
+
+@media only screen and (max-width: 599px) {
+
+	.articles{
+		width: calc(100% - 60px);
+		float: left;
+		padding:30px;
+	}
+
+	.post{ margin-bottom: 30px; width: 100%; float: left; } 
+	
+	.post{
+		
+		h1{
+			a{ font-size: 18px; line-height: 27px; }
+		}
+	}
+
+}
