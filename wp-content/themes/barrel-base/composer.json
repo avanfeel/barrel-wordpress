@@ -1,0 +1,8 @@
+{
+    "name": "barrel-base",
+    "authors": [],
+    "require": {},
+    "config": {
+        "vendor-dir": "lib/vendor"
+    }
+}
